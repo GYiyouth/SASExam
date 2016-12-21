@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <package name="mypackage" extends="struts-default">
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="refresh" class="action.freshAction" method="execute">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="refreshAll" class="action.freshAction" method="freshAll">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="clearXML" class="action.freshAction" method="clearXML">
+            <result name="success">/index.jsp</result>
+        </action>
+
+
+    </package>
+</struts>
